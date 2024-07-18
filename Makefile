@@ -15,9 +15,12 @@ CONDA_ENV_HIST_FILE = environment-hist.yaml
 
 export PYSPARK_DRIVER_PYTHON      = jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS = notebook
-export SPARK_LOCAL_IP             = 127.0.0.1
 
-export PATH := ${SPARK_HOME}/bin:${PATH}
+export SPARK_LOCAL_IP  = 127.0.0.1
+export SPARK_CONF_DIR  = $(ROOT)/conf/spark
+
+export PATH            := ${HADOOP_HOME}/bin:${SPARK_HOME}/bin:${PATH}
+export LD_LIBRARY_PATH := ${HADOOP_HOME}/lib/native:${LD_LIBRARY_PATH}
 
 .DEFAULT_GOAL = notebook
 

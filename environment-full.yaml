@@ -199,4 +199,5 @@ dependencies:
   - pip:
       - findspark==2.0.1
       - py4j==0.10.9.7
+      - pyarrow==17.0.0
       - pyspark==3.5.1
