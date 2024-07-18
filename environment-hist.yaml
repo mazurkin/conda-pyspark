@@ -1,0 +1,10 @@
+name: pyspark
+channels:
+  - defaults
+dependencies:
+  - python=3.10.12
+  - jupyter
+  - matplotlib
+  - pandas
+  - plotly
+  - scikit-learn
