@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "jupyter-environment"
+name = "spark-environment"
 version = "0.1.0"
-description = "Jupyter project"
+description = "spark environment"
 authors = ["Nick Mazurkin <mazurkin@gmail.com>"]
 readme = "README.md"
 
