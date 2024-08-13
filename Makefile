@@ -54,6 +54,10 @@ env-create:
 env-update:
 	@conda run --no-capture-output --live-stream --name $(CONDA_ENV_NAME) poetry update
 
+.PHONY: env-list
+env-list:
+	@conda run --no-capture-output --live-stream --name $(CONDA_ENV_NAME) poetry show
+
 .PHONY: env-remove
 env-remove:
 	@conda env remove --yes --name $(CONDA_ENV_NAME)
@@ -65,10 +69,6 @@ env-shell:
 .PHONY: env-info
 env-info:
 	@conda run --no-capture-output --live-stream --name $(CONDA_ENV_NAME) conda info
-
-.PHONY: env-list
-env-list:
-	@conda run --no-capture-output --live-stream --name $(CONDA_ENV_NAME) conda list
 
 # -----------------------------------------------------------------------------
 # util
